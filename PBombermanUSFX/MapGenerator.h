@@ -12,6 +12,7 @@
 #include "TilesGraph.h"
 #include "Pila.h"
 #include "Bomba.h"
+#include "GameManager.h"
 
 class MapGenerator
 {
@@ -43,6 +44,7 @@ public:
 	// Métodos propios
 	bool crearObjetosJuego(string _path);
 	void transferirObjetosJuego(vector<GameObject*>& _vectorObjetosJuegoDestino);
+	/*void generarMapa(int anchoMapa, int altoMapa, GameManager* gameManager);*/
 
 };
 

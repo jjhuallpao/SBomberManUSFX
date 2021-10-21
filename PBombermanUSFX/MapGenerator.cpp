@@ -41,6 +41,8 @@ bool MapGenerator::crearObjetosJuego(string _path)
 	texturaMuroCeramica = new Texture();
 	Texture* texturaSueloCesped;
 	texturaSueloCesped = new Texture();
+	Texture* texturaBomba;
+	//texturaBomba = new Texture();
 	
 	Texture::renderer = renderer;
 
@@ -49,6 +51,7 @@ bool MapGenerator::crearObjetosJuego(string _path)
 	texturaMuroCeramica->loadFromImage("resources/muro_ceramica.jpg");
 	texturaMuroMetal->loadFromImage("resources/muro_metal.jpg");
 	texturaSueloCesped->loadFromImage("resources/suelo_cesped.jpg");
+	//texturaBomba->loadFromImage("resources/bomba.bmp");
 	
 	int x = 0;
 	int y = 0;
@@ -81,16 +84,23 @@ bool MapGenerator::crearObjetosJuego(string _path)
 					//pilaObjetosJuegoMurosMetal.Insertar((GameActor*)objetoNuevo);
 
 					break;
-				case '1':
+				/*case '1':
 					objetoNuevo = new MuroMetal(texturaMuroCeramica, tileNuevo);
 					break;
 				case '2':
 					objetoNuevo = new MuroCeramica(texturaMuroMetal, tileNuevo);
-					break;
+					break;*/
 					/*case 'B':
 						objetoNuevo = new Bomberman(texturaBomberman, tileNuevo);
 						break;*/
 				}
+				//crear muro ceramica y muro metal aleatoriamente
+				/*for (int i = 0; i < SCREEN_HEIGHT; i++) {
+					for (int j = 0; j < SCREEN_WIDTH; j++) {
+						 objetoNuevo = new MuroMetal(texturaMuroCeramica, tileNuevo) * (SCREEN_HEIGHT+ rand()% (SCREEN_WIDTH-SCREEN_HEIGHT));
+						 objetoNuevo = new MuroCeramica(texturaMuroCeramica, tileNuevo)* (SCREEN_HEIGHT + rand() % (SCREEN_WIDTH - SCREEN_HEIGHT));
+					}
+				}*/
 
 				if (objetoNuevo != nullptr) {
 					((GameActor*)objetoNuevo)->setPosicionX(x * 34);
@@ -111,8 +121,20 @@ bool MapGenerator::crearObjetosJuego(string _path)
 	if (objetoBomberman != nullptr) {
 		((GameActor*)objetoBomberman)->setPosicionX(bombermanPosicionX * 34);
 		((GameActor*)objetoBomberman)->setPosicionY(bombermanPosicionY * 34);
+		((GamePawn*)objetoBomberman)->setBotonBomba(SDLK_b);
 		vectorObjectosJuego.push_back(objetoBomberman);
 	}
+
+	/*GameObject* objetoBomba = nullptr;
+	tileNuevo = tilesGraph->getTileEn(bombermanPosicionX, bombermanPosicionY);
+	objetoBomba = new Bomba(texturaBomba, tileNuevo);
+	if (objetoBomberman != nullptr) {
+		((GameActor*)objetoBomba)->setPosicionX(bombermanPosicionX * 34);
+		((GameActor*)objetoBomba)->setPosicionY(bombermanPosicionY * 34);
+		((GamePawn*)objetoBomba)->setBotonBomba(SDLK_b);
+		vectorObjectosJuego.push_back(objetoBomba);
+	}*/
+
 
 	GameObject* objetoBomberwoman = nullptr;
 	tileNuevo = tilesGraph->getTileEn(bomberwomanPosicionX, bomberwomanPosicionY);

@@ -93,7 +93,7 @@ void GameManager::onEvent(SDL_Event* _event)
 	//	case SDLK_n:
 	//		//SDL_SetWindowFullscreen(gWindow, SDL_WINDOW_MAXIMIZED);
 	//		break;
-	//	}
+	//	
 	}
 }
 

@@ -42,6 +42,7 @@ protected:
 	
 	MoveDirection direccionActual;
 	MoveDirection direccionSiguiente;
+	
 
 	/*int numeroFrame;
 	int contadorFrames;

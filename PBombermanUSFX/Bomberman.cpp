@@ -1,4 +1,5 @@
 #include "Bomberman.h"
+#include "MapGenerator.h"
 
 Bomberman::Bomberman(Texture* _textura, Tile* _tileActual) :GamePawn(_textura, _tileActual)
 {
@@ -24,11 +25,14 @@ Bomberman::Bomberman(Texture* _textura, Tile* _tileActual) :GamePawn(_textura, _
 	enMovimiento = false;
 	direccionActual = MOVE_DIRECTION_NONE;
 	direccionSiguiente = MOVE_DIRECTION_NONE;
-
+	
 }
 
 void Bomberman::update()
 {
+	/*Texture* texturaBomba;
+	texturaBomba = new Texture();*/
+
 	direccionSiguiente = MOVE_DIRECTION_NONE;
 
 	if (keyboardInput->IsKeyOn(botonAbajo)) {
@@ -43,6 +47,11 @@ void Bomberman::update()
 	else if (keyboardInput->IsKeyOn(botonIzquierda)) {
 		direccionSiguiente = MOVE_DIRECTION_IZQUIERDA;
 	}
+
+	//creacion de la bomba con la tecla b
+	/*else if (keyboardInput->IsKeyOn(botonBomba)) {
+		texturaBomba->loadFromImage("resources/bomba.bmp");
+	}*/
 		
 
 	//if (tileActual != nullptr && tileActual->getSueloCesped() != nullptr) {

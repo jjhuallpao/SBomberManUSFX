@@ -39,3 +39,4 @@ void Bomba::setTileActual(Tile* _tileNuevo)
 		posicionY = 0;
 	}
 }
+
