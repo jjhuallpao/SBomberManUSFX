@@ -1,10 +1,11 @@
 #pragma once
 #include "GameActor.h"
-class MuroCeramica :
+class Bomba :
     public GameActor
 {
 public:
-    MuroCeramica(Texture* _textura, Tile* _tileActual);
+    Bomba(Texture* _textura, Tile* _tileActual);
     void setTileActual(Tile* _tileNuevo);
 };
+
 

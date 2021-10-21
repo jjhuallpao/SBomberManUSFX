@@ -8,21 +8,25 @@ class GamePawn :
 protected:
     KeyboardInput* keyboardInput;
     SDL_Keycode botonBomba = SDLK_b;
-    SDL_Keycode botomArriba = SDLK_UP;
+    SDL_Keycode botonArriba = SDLK_UP;
     SDL_Keycode botonAbajo = SDLK_DOWN;
-    SDL_Keycode botomIzquierda = SDLK_LEFT;
+    SDL_Keycode botonIzquierda = SDLK_LEFT;
     SDL_Keycode botonDerecha = SDLK_RIGHT;
-
-    SDL_Keycode botonArriba2 = SDLK_w;
-    SDL_Keycode botonAbajo2 = SDLK_s;
-    SDL_Keycode botonIzquierda2 = SDLK_a;
-    SDL_Keycode botonDerecha2 = SDLK_d;
     
 public:
     // Constructores destructor
     GamePawn();
     GamePawn(Texture* _textura, Tile* _tileActual);
     ~GamePawn();
+    // Metodos accesores
+
+    void setBotonBomba(SDL_KeyCode _botonBomba) { botonBomba = _botonBomba; }
+    void setBotonArriba(SDL_KeyCode _botonArriba) { botonArriba = _botonArriba; }
+    void setBotonAbajo(SDL_KeyCode _botonAbajo) { botonAbajo = _botonAbajo; }
+    void setBotonDerecha(SDL_KeyCode _botonDerecha) { botonDerecha = _botonDerecha; }
+    void setBotonIzquierda(SDL_KeyCode _botonIzquierda) { botonIzquierda = _botonIzquierda; }
+
+
 
     // Metodos heredados
     virtual void render();
@@ -31,6 +35,7 @@ public:
     virtual void deleteGameObjet();
 
     // Metodos especificos
-    virtual void setTileActual(Tile* _tileNuevo);
+    virtual void setTileActual(Tile* _tileNuevo) {};
+
 };
 

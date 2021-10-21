@@ -1,11 +1,12 @@
-#include "MuroCeramica.h"
+#include "Bomba.h"
+#include "GamePawn.h"
 
-MuroCeramica::MuroCeramica(Texture* _textura, Tile* _tileActual) :GameActor(_textura, _tileActual)
+Bomba::Bomba(Texture* _textura, Tile* _tileActual) :GameActor(_textura, _tileActual)
 {
 	tileActual = _tileActual;
 
 	if (tileActual != nullptr) {
-		tileActual->setMuroCeramica(this);
+		tileActual->setBomba(this);
 
 		posicionX = tileActual->getPosicionTileX() * Tile::anchoTile;
 		posicionY = tileActual->getPosicionTileY() * Tile::altoTile;
@@ -19,16 +20,16 @@ MuroCeramica::MuroCeramica(Texture* _textura, Tile* _tileActual) :GameActor(_tex
 	}
 }
 
-void MuroCeramica::setTileActual(Tile* _tileNuevo)
+void Bomba::setTileActual(Tile* _tileNuevo)
 {
 	if (tileActual != nullptr) {
-		tileActual->setMuroCeramica(nullptr);
+		tileActual->setBomba(nullptr);
 	}
 
 	tileActual = _tileNuevo;
 
 	if (tileActual != nullptr) {
-		tileActual->setMuroCeramica(this);
+		tileActual->setBomba(this);
 
 		posicionX = tileActual->getPosicionTileX() * Tile::anchoTile;
 		posicionY = tileActual->getPosicionTileY() * Tile::altoTile;
