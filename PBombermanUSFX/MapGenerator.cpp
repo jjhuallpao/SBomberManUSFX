@@ -84,23 +84,27 @@ bool MapGenerator::crearObjetosJuego(string _path)
 					//pilaObjetosJuegoMurosMetal.Insertar((GameActor*)objetoNuevo);
 
 					break;
-				/*case '1':
+				case '1':
 					objetoNuevo = new MuroMetal(texturaMuroCeramica, tileNuevo);
 					break;
 				case '2':
 					objetoNuevo = new MuroCeramica(texturaMuroMetal, tileNuevo);
-					break;*/
+					break;
 					/*case 'B':
 						objetoNuevo = new Bomberman(texturaBomberman, tileNuevo);
 						break;*/
 				}
 				//crear muro ceramica y muro metal aleatoriamente
-				/*for (int i = 0; i < SCREEN_HEIGHT; i++) {
-					for (int j = 0; j < SCREEN_WIDTH; j++) {
-						 objetoNuevo = new MuroMetal(texturaMuroCeramica, tileNuevo) * (SCREEN_HEIGHT+ rand()% (SCREEN_WIDTH-SCREEN_HEIGHT));
-						 objetoNuevo = new MuroCeramica(texturaMuroCeramica, tileNuevo)* (SCREEN_HEIGHT + rand() % (SCREEN_WIDTH - SCREEN_HEIGHT));
-					}
-				}*/
+				//int xa, ya;
+				//for (int i = 0; i < SCREEN_HEIGHT; i++) {
+				//	for (int j = 0; j < SCREEN_WIDTH; j++) {
+				//		objetoNuevo = new MuroMetal(texturaMuroCeramica, tileNuevo);
+				//		xa= xa = (rand() % (TilesGraph + 1)) * Tile::AnchoTile;
+				//		ya = TilesGraph::altoTilesGraph;
+				//			
+				//			//objetoNuevo = new MuroCeramica(texturaMuroCeramica, tileNuevo)* (SCREEN_HEIGHT + rand() % (SCREEN_WIDTH - SCREEN_HEIGHT));
+				//	}
+				//}
 
 				if (objetoNuevo != nullptr) {
 					((GameActor*)objetoNuevo)->setPosicionX(x * 34);

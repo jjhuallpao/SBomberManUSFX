@@ -48,10 +48,11 @@ void Bomberman::update()
 		direccionSiguiente = MOVE_DIRECTION_IZQUIERDA;
 	}
 
-	//creacion de la bomba con la tecla b
-	/*else if (keyboardInput->IsKeyOn(botonBomba)) {
-		texturaBomba->loadFromImage("resources/bomba.bmp");
-	}*/
+
+	////creacion de la bomba con la tecla b
+	//else if (keyboardInput->IsKeyOn(botonBomba)) {
+	//	texturaBomba->loadFromImage("resources/bomba.bmp");
+	//}
 		
 
 	//if (tileActual != nullptr && tileActual->getSueloCesped() != nullptr) {
@@ -98,6 +99,10 @@ void Bomberman::update()
 			posicionX = std::min(posicionX + velocidad, tileSiguiente->getPosicionTileX() * Tile::anchoTile);
 			//posicionX = posicionX + velocidad;
 			break;
+		}
+		if (nr % 10 == 0) {
+			movimientoBomberman[nr] = { posicionX,posicionY };
+			std::cout << "Movimientos realizados por BomberMan: "<< nr << std::endl;
 		}
 
 		// Asignacion de coliciones

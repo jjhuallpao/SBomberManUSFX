@@ -159,7 +159,7 @@ int GameManager::onExecute() {
 
 	std::cout << "Numero de objetos en el vector: " << actoresJuego.size() << std::endl;
 	std::cout << "Numero de objetos creados:" << GameObject::numeroGameObjectCreados << std::endl;
-
+	
 	return 0;
 
 }
