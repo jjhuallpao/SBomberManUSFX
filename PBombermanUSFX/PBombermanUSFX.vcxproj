@@ -142,6 +142,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Builder\Builder.cpp" />
+    <ClCompile Include="Builder\Director.cpp" />
     <ClCompile Include="Entities\ClasicoEnemy.cpp" />
     <ClCompile Include="Entities\ClasicoPlayer.cpp" />
     <ClCompile Include="Core\Animation.cpp" />
@@ -180,6 +182,8 @@
     <ClCompile Include="Util\Pathfinding.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Builder\Builder.h" />
+    <ClInclude Include="Builder\Director.h" />
     <ClInclude Include="Entities\ClasicoEnemy.h" />
     <ClInclude Include="Entities\ClasicoPlayer.h" />
     <ClInclude Include="Const.h" />
@@ -207,6 +211,7 @@
     <ClInclude Include="GameAITypes.h" />
     <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameTextures.h" />
+    <ClInclude Include="GameVersions.h" />
     <ClInclude Include="Managers\AssetManager.h" />
     <ClInclude Include="Managers\SceneManager.h" />
     <ClInclude Include="Entities\Muro.h" />
